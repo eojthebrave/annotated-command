@@ -44,7 +44,7 @@ class ExampleAnnotatedCommand extends AnnotatedCommand
      * @usage bet alpha --flip
      *   Concatenate "alpha" and "bet".
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function myEchoAnnotated(InputInterface $input, OutputInterface $output)
     {
         $one = $input->getArgument('one');
         $two = $input->getArgument('two');

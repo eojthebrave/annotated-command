@@ -158,7 +158,7 @@ EOT;
 
         $command = $this->commandFactory->createCommand($commandInfo, $this->commandFileInstance);
 
-        $input = new StringInput('global-options-only test');
+        $input = new StringInput('global-options-only -n test');
         $this->assertRunCommandViaApplicationEquals($command, $input, "Arg is test, options[help] is false");
     }
 

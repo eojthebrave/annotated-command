@@ -872,10 +872,10 @@ class CommandInfo
     protected function parseDocBlock()
     {
         if (!$this->docBlockIsParsed) {
+            $this->docBlockIsParsed = true;
             // The parse function will insert data from the provided method
             // into this object, using our accessors.
             CommandDocBlockParserFactory::parse($this, $this->reflection);
-            $this->docBlockIsParsed = true;
             // Use method's return type if @return is not present.
             if ($this->reflection->hasReturnType() && !$this->getReturnType()) {
                 $type = $this->reflection->getReturnType();
